@@ -109,7 +109,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void btnValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValidarActionPerformed
         // TODO add your handling code here:
         
-       
+        ValidarPalindromo p = new ValidarPalindromo();
+        
+        txtSalida.setText("");
+        String validacion = "No es palindromo"; 
+        if(p.Palindromo(txtPalabra.getText())){
+            validacion = "Si es palindromo"; 
+        }
+        
+        txtSalida.setText("La palabra ["+txtPalabra.getText()+"] "+ validacion );
+        
         
     }//GEN-LAST:event_btnValidarActionPerformed
 
